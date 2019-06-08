@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Editor</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="Editer.css">
+	<script src="fabric.min.js"></script>
+	<style type="text/css">
+	/*@import */
+		/*canvas{
+			border: 1px solid black;
+		}*/
+		
+	</style>
+</head>
+<body>
+   <div class="container">
+      	<canvas id="canvas" width="500" height="450" style="border:1px solid #000000"></canvas>
+      	<h5>TEXT</h5>
+      	<div>
+      			<button id="text">Text</button>
+      			<div class="controls">
+						<p>Font-family: 
+							<select id="font-family">
+								<option value="Times New Roman">Times New Roman</option>
+								<option value="Pacifico">Pacifico</option>
+								<option value="VT323">VT323</option>
+								<option value="Quicksand">Quicksand</option>
+								<option value="Inconsolata">Inconsolata</option>
+								<option value="Output Sans">Output Sans</option>
+							</select>
+						</p>
+               </div> 
+      			<input type="color" id="textcolor">
+      	</div>
+      	<h5>SHAPES</h5>
+      	<div>
+		      	<button id="Circle">Add Circle</button>
+		      	<button id="Rect">Add Rect</button>
+		      	<button id="Tri">Add Triangle</button>
+		      	<button id="Ecllipse">Add Ecllipse</button>
+		      	<button id="line">Add line</button>
+		      	<input type="color" name="Change" id="chng">
+		      	<!-- <button id="Polygon">Add polygon</button>
+		      	<button id="Polyline">Add Polyline</button> -->
+        </div>  
+        <h5>IMAGE</h5>
+        <div>
+        		Add Image(png)<input type="file" id="fileImg">
+        </div>
+        <h5>SHIRT COLOR</h5>
+        <div>
+        		<button id="hue">Change Tshirt color</button> 
+		</div>		   
+		<div class="container">
+			<button id="clear">Clear</button>
+			<button id="save">Save</button>
+		</div>
+		<div>
+			<button id="collection" onclick="location.href='/images'">Your Collections</button>
+		</div>
+   </div>
+    <hr>
+    <hr>
+    
+      	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      	<!-- <script src="fabric.min.js"></script>  -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script> 
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <script src="fontfaceobserver.js"></script>
+        <script src="FileSaver.min.js"></script>
+   	    <script src="Editer.js"></script>
+</body>
+</html>

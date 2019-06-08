@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Your Collections</title>
+		<link rel="stylesheet" type="text/css" href="bootstrap.css">
+<style>
+    img{
+        width:50%;
+        
+    }
+</style>
+</head>
+<body>
+<div class="container">
+   	 <div class="row">
+   	    <div class="col-sm 6">
+   	    	 <!--<h1 class="text-center display-4 my-4">Your Edited T-Shirts</h1> -->
+   	    	<form action="/upload" method="POST" enctype="multipart/form-data" >
+   	    		<div>
+   	    			<input type="file" name="file" id="file" class="custom-file-input">
+   	    			<label for="file" class="custom-file-label">Choose File</label>
+   	    		</div>
+   	    		<div class="sub">
+   	    		<input type="submit"value="Submit" class="btn btn-primary btn-block">
+                 </div>  	    	
+   	    	</form>
+   	    	<hr>
+   	    	<%  if(files){ %>
+   	    	  <% files.forEach(function(file){%>
+   	    	  	<div class="card card-body mb-3">
+   	    	  		<% if(file.isImage){%>
+   	    	  		<img src="image/<%=file.filename%>">
+   	    	  		<% }else{%>
+   	    	  		<%file.filename%>
+   	    	  		<% }%>
+   	    	  		<form method="POST" action="/files/<%=file._id %>?_method=DELETE">
+   	    	  		    <button class="btn btn-danger btn-block mt-4">DELETE</button>
+   	    	  		</form>
+   	    	  	</div>
+   	    	 <% }) %>
+   	    	<% } else{ %>
+   	    	<p>No files</p>
+   	    	<% } %>
+   	    </div>
+   	 </div>
+   </div>
+   </body>
+</html>

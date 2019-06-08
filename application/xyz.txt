@@ -1,0 +1,30 @@
+<!--<hr>-->
+   	    	<% if(files){ %>
+   	    	  <% files.forEach(function(){%>
+   	    	  	<div class="card card=body mb-3">
+   	    	  		<% if(files.isImage){%>
+   	    	  		<img src="image/<%=file.filename%>">
+   	    	  		<% }else{%>
+   	    	  		<%file.filename%>
+   	    	  		<% }%>
+   	    	  	</div>
+   	    	 <% }); %>
+   	    	<% } else{ %>
+   	    	<p>No files</p>
+   	    	<% } %>
+   	    	
+   	    	
+   	    	
+   	    	<div>
+  <% foundPerson.forEach(function(ff){%>
+  <p> <%=ff.text%> </p>
+  <p> <%=ff.username%> </p>
+  <% }) %>
+  
+</div>
+
+<div>
+  <% text.forEach(function(ff){%>
+  <p> <%=ff.text%> </p>
+  <% }) %>
+</div>
